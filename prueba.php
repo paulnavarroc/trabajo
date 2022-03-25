@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 //Pega todo tu codigo aqui, excepto <?php y ? > porque ya se tiene
 
