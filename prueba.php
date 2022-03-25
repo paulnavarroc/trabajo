@@ -8,7 +8,7 @@ $conn = mysqli_init();
             //mysqli_ssl_set($conn,NULL,NULL, "/var/www/html/DigiCertGlobalRootG2.crt.pem", NULL, NULL);
 
             // Establish the connection
-            mysqli_real_connect($conn, 'servidort.mysql.database.azure.com', 'paulnc@myservidor', 'Paul.1234', 'datos', 3306, NULL, MYSQLI_CLIENT_SSL);
+            mysqli_real_connect($conn, 'servidort.mysql.database.azure.com', 'paulnc@servidort', 'Paul.1234', 'datos', 3306, NULL, MYSQLI_CLIENT_SSL);
 
             //If connection failed, show the error
             if (mysqli_connect_errno())
