@@ -31,6 +31,43 @@ $conn = mysqli_init();
     <title>trabajo</title>
 </head>
 <body>
+            <h1>FORMULARIO</h1>
+	Ingresar DNI:
+<div>
+            <form action="index.php" method="post">
+            <input type="text" name="buscar"><br><br>
+            <input type="submit" value="buscar">
+            <a href="nuevo.php">Nuevo</a>
+            </form>
+</div>
+
+
+<div>
+            <table>
+                        <tr>
+                        <td>Nombre</td>
+                        <td>Apellido</td>
+                        </tr>
+                        <?php 
+                        $buscar=$_POST['buscar'];
+                        $sql = mysqli_query($conn,"SELECT nombre,apellido FROM datos where dni like '$buscar' '%' order by id desc";
+                                    while ($mostrar=mysqli_fetch_assoc($sql)) {
+                                                ?>
+                                                <tr>	
+
+                                                                        <td>	<?php 	echo $mostrar['nombre'] ?></td>
+                                                                        <td>	<?php 	echo $mostrar['apellido'] ?></td>
+
+
+                                                </tr>
+                                                <?php 	
+
+
+                                    }
+
+                         ?>
+            </table>
+</div>
     <table border="1">
        <tr>
            <td>Dni</td>
