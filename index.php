@@ -36,13 +36,14 @@ $conn = mysqli_init();
 <div>
             <form action="index.php" method="post">
             <input type="text" name="buscar"><br><br>
-            <input type="submit" value="buscar">
+            <input type="submit" value="buscar" name="bus">
             <a href="nuevo.php">Nuevo</a>
             </form>
 </div>
 
 
 <div>
+	<?php if(isset(bus)){ ?>
             <table>
                         <tr>
                         <td>Nombre</td>
@@ -67,6 +68,7 @@ $conn = mysqli_init();
 
                          ?>
             </table>
+	<?php } ?>
 </div>
     <table border="1">
        <tr>
